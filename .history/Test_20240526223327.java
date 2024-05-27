@@ -1,6 +1,8 @@
 
 import java.util.Scanner;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 import java.lang.System;
 
 public class Test
@@ -10,10 +12,9 @@ public class Test
   Scanner input = new Scanner(System.in);
   System.out.print("Enter You Name: ");
   String name = input.nextLine();
-  System.out.print("Enter You Age: ");
+  System.out.print("Einter You Age: ");
   int age = input.nextInt();
   System.out.println("Your Name: " + name);
-  System.out.println("Your Age is: " + age);
-  System.out.println("hellow " + name + " how was you name? ");
+  System.out.println("Your Age is: " + age );
   }
 }

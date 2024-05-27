@@ -14,6 +14,6 @@ public class Test
   int age = input.nextInt();
   System.out.println("Your Name: " + name);
   System.out.println("Your Age is: " + age);
-  System.out.println("hellow " + name + " how was you name? ");
+  System.out.println("hellow " + name + "how was you name? ");
   }
 }
