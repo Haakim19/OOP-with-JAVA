@@ -1,6 +1,6 @@
 
 
-public class Test{
+public class Test_20240526172842{
     public static void main(String[] args) {
     int [] [] x = new int [3] [3] ;
     int num = 1 ;
