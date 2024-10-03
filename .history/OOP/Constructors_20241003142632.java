@@ -17,7 +17,6 @@ class item {
 public class Constructors {
     public static void main(String[] args) {
         item item1 = new item(2,100);
-        System.out.println(item1.itemNo);
-        System.out.println(item1.itemPrice);
+        item1.display();
     }
 }

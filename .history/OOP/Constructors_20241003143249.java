@@ -7,17 +7,17 @@
 //     }
 // }
 class item {
-    int itemNo;
+    in itemNo;
     double itemPrice;
     public item (int a ,double b){
         itemNo = a;
         itemPrice = b;
-    }
-}
+    
+
 public class Constructors {
-    public static void main(String[] args) {
-        item item1 = new item(2,100);
-        System.out.println(item1.itemNo);
-        System.out.println(item1.itemPrice);
+    public static void main(String[] args) 
+        item item1 = new item(2,100)
+        System.out.println(item1.itemNo)
+        System.out.println(item1.itemPrice)
     }
 }

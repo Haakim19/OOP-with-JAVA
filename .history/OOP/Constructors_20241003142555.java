@@ -9,7 +9,7 @@
 class item {
     int itemNo;
     double itemPrice;
-    public item (int a ,double b){
+    public item (int a double b){
         itemNo = a;
         itemPrice = b;
     }
@@ -17,7 +17,6 @@ class item {
 public class Constructors {
     public static void main(String[] args) {
         item item1 = new item(2,100);
-        System.out.println(item1.itemNo);
-        System.out.println(item1.itemPrice);
+        item1.display();
     }
 }
