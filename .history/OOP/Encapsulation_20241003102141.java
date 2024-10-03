@@ -15,11 +15,10 @@ class shopBilling(){
 
 }
 
-
 class bankAccount{
-    private String accountNumber;
-    private String accountName;
-    private double balance;
+    public String accountNumber;
+    public String accountName;
+    public double balance;
 
     public void fnSteData(String accNo,String accName,double bal){
         accountNumber = accNo;
@@ -27,25 +26,20 @@ class bankAccount{
         balance = bal;
 
     }
-    public void fnWithdrowAmmount(double witdrow){
-        if (witdrow < balance){
-            System.out.println("You can make a Withdrow");
-            balance -= witdrow;
-        }
+    public void fnWithdrowAmmount(){
+
     }
-    public void fnDepositAmmount(double blnc){
-        balance += blnc;
-        System.out.println("New balance - " + balance);
+    public void fnDepositAmmount(){
+
     }
 }
 
-public class DriverClass {
-     public static void main(String[] args) {
-        shopBilling item = new shopBilling();
+public class Encapsulation {
+    public static void main(String[] args) {
+        shopBilling bill = new shopBilling();
         bankAccount account = new bankAccount();
         account.fnSteData("0111234","John Doe",1000);
-        account.fnDepositAmmount(10000);
-        account.fnWithdrowAmmount(20000);
+        
     }
 }
 
