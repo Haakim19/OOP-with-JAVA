@@ -54,17 +54,7 @@ class LoanAccount{
     private double loanAmount, intrestRate, balance;
     private int loanTerm;
 
-    //? Account Number Method
-    public void setaccountNumber(String accountNumber){
-        if (accountNumber == null){
-            System.out.println("Enter a valid Account Number");
-        }
-        else {
-            this.accountNumber = accountNumber;
-        }
-    }
-    public String getaccountNumber(){
-        
+    public String setaccountNumber(String value){
     }
     
     public String getAccountHolderName() {

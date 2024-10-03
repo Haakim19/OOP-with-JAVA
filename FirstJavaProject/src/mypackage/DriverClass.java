@@ -1,10 +1,10 @@
-package mypackage;
-
-import java.util.Scanner;
-
-public class DriverClass {
-    public static void main(String[] args) {
-           Scanner input = new Scanner(System.in);
+//package mypackage;
+//
+//import java.util.Scanner;
+//
+//public class DriverClass {
+//    public static void main(String[] args) {
+//           Scanner input = new Scanner(System.in);
 //        System.out.print("Enter you name- ");
 //        String name = input.nextLine();
 //        System.out.println("Hello " + name);
@@ -58,18 +58,79 @@ public class DriverClass {
 //        }
 //            System.out.print("Avarage price- " + total/10);
 //        }
-         
-        int[] numbers = new int [5];
-        for (int i = 0 ; i <5 ; i ++){
-            System.out.print("Enter number- ");
-            numbers[i] = input.nextInt();
-        }
-        for (int x : numbers){
-            System.out.print(x + " ");
-        }
+//         
+//        int[] numbers = new int [5];
+//        for (int i = 0 ; i <5 ; i ++){
+//            System.out.print("Enter number- ");
+//            numbers[i] = input.nextInt();
+//        }
+//        for (int x : numbers){
+//            System.out.print(x + " ");
+//        }
+//
+//
+//
+//    }
+//}
 
+import java.util.Scanner;
+class LoanAccount{
+    private String accountNumber, accountHolderName;
+    private double loanAmount, intrestRate, balance;
+    private int loanTerm;
 
+    public String setaccountNumber(){
 
     }
+
+    public String getAccountHolderName() {
+        return accountHolderName;
+    }
+
+    public void setAccountHolderName(String accountHolderName) {
+        this.accountHolderName = accountHolderName;
+    }
+
+    public double getLoanAmount() {
+        return loanAmount;
+    }
+
+    public void setLoanAmount(double loanAmount) {
+        this.loanAmount = loanAmount;
+    }
+
+    public double getIntrestRate() {
+        return intrestRate;
+    }
+
+    public void setIntrestRate(double intrestRate) {
+        this.intrestRate = intrestRate;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public int getLoanTerm() {
+        return loanTerm;
+    }
+
+    public void setLoanTerm(int loanTerm) {
+        this.loanTerm = loanTerm;
+    }
+    public void getaccountNumber(){
+
+    }
+    public 
+
+    public static void main(String[] args) {
+        
+    }
 }
+
+
 
