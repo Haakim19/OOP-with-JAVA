@@ -49,152 +49,142 @@
 // }
 
 import java.util.Scanner;
-
-// LoanAccount class initialization
-class LoanAccount {
+//loan account class intialization
+class LoanAccount{
     private String accountNumber, accountHolderName;
-    private double loanAmount, interestRate, balance, monthlyPayment;
+    private double loanAmount, intrestRate, balance, makePayment , monthlyPayment;
     private int loanTerm;
 
     // Account Number Method
-    public void setaccountNumber(String accountNumber) {
-        if (accountNumber == null) {
+    public void setaccountNumber(String accountNumber){
+        if (accountNumber == null){
             System.err.println("Enter a valid Account Number!");
-        } else {
+        }
+        else {
             this.accountNumber = accountNumber;
         }
     }
-
-    public String getaccountNumber() {
+    public String getaccountNumber(){
         return this.accountNumber;
     }
-
-    // Account holder name method
+    //Account holder name method
     public String getAccountHolderName() {
         return this.accountHolderName;
     }
-
+    
     public void setAccountHolderName(String accountHolderName) {
-        if (accountHolderName.isEmpty()) {
+        if(accountHolderName.isEmpty()){
             System.err.println("Please Enter a Valid Name!");
-        } else {
+        }
+        else {
             this.accountHolderName = accountHolderName;
         }
     }
-
-    // Loan amount method
+    //Loan amount method
     public double getLoanAmount() {
         return this.loanAmount;
     }
 
     public void setLoanAmount(double loanAmount) {
-        if (loanAmount > 0) {
+        if (loanAmount > 0 ){
             this.loanAmount = loanAmount;
-            this.balance = loanAmount; // Initialize the balance with the loan amount
-        } else {
-            System.err.println("The loan amount you entered is insufficient!");
+        }
+        else{
+            System.err.println("The Loan amount you enterd not shuficent!");
         }
     }
-
-    // Interest rate method
-    public double getInterestRate() {
-        return this.interestRate;
+    //Intrest rate method
+    public double getIntrestRate() {
+        return this.intrestRate;
     }
 
-    public void setInterestRate(double interestRate) {
-        if (interestRate > 0 && interestRate < 100) {
-            this.interestRate = interestRate;
-        } else {
-            System.out.println("The interest rate you entered is not valid");
+    public void setIntrestRate(double intrestRate) {
+        if (intrestRate > 0 && intrestRate < 100){
+            this.intrestRate = intrestRate;
+        }
+        else {
+            System.out.println("The intrest rate you enterd not valide");
         }
     }
-
-    // Loan term method
+    //loan term method
     public int getLoanTerm() {
         return this.loanTerm;
     }
-
+    
     public void setLoanTerm(int loanTerm) {
-        if (loanTerm >= 1 && loanTerm <= 30) {
+        if (loanTerm >= 1 || loanTerm <=30){
             this.loanTerm = loanTerm;
-        } else {
-            System.out.println("Loan term must be between 1 and 30 years.");
         }
     }
-
-    // Monthly payment method
+    //balance calculating method
     public double getMonthlyPayment() {
         monthlyPayment = loanAmount / (loanTerm * 12);
         return this.monthlyPayment;
     }
-
-    // Balance method
-    public double getBalance() {
+    public double getBalance(){
         return this.balance;
     }
-
-    public void makePayment(double payment) {
-        if (payment <= balance) {
-            this.balance -= payment;
-            System.out.println("Payment successful. Remaining balance: " + this.balance);
-        } else {
-            System.out.println("Payment exceeds the balance");
+    public void setBalance(double lAmount){
+        lAmount = this.balance;
+    }
+    public void makePayment(double payment){
+        if (balance > payment){
+            this.balance -=payment;
+        }
+        else{
+            System.out.println(" Payment exceeds the Balance ");
         }
     }
 }
-
-public class GroupWork {
-
+public class GroupWork{
+    
     public static void main(String[] args) {
-        // Object for the class loan account
-        LoanAccount loan = new LoanAccount();
-        // Object for Scanner library
+        //Object for the class loan account
+        LoanAccount Loan = new LoanAccount();
+        //object for Scanner library
         Scanner scan = new Scanner(System.in);
-
-        // Variables for the user input
+        
+        //Variales for the user input
         String accountNumber, accountHolderName;
-        double loanAmount, interestRate, makePayment;
+        double loanAmount, intrestRate,makePayment = 0.0;
         int loanTerm;
-
-        // User inputs
-        System.out.print("Enter The account Number: ");
+        
+        //User inputs 
+        System.out.print("Enter The account Number- ");
         accountNumber = scan.nextLine();
-
-        System.out.print("Enter The Account Holder Name: ");
+        
+        System.out.print("Enter The Account Holder Name- ");
         accountHolderName = scan.nextLine();
 
-        System.out.print("Enter The Loan Amount: ");
+        System.out.print("Enter The Loan Amount- ");
         loanAmount = scan.nextDouble();
-
-        System.out.print("Enter The Interest Rate: ");
-        interestRate = scan.nextDouble();
-
-        System.out.print("Enter The Loan Term (years): ");
+        
+        System.out.print("Enter The Intrest Rate- ");
+        intrestRate = scan.nextDouble();
+        
+        System.out.print("Enter The Loan Term- ");
         loanTerm = scan.nextInt();
-
-        System.out.print("Enter Your Payment Amount: ");
+            
+        System.out.print("Your Monthly Payment Amount- ");
         makePayment = scan.nextDouble();
 
-        // Save all user data using loan object
-        loan.setAccountHolderName(accountHolderName);
-        loan.setaccountNumber(accountNumber);
-        loan.setInterestRate(interestRate);
-        loan.setLoanTerm(loanTerm);
-        loan.setLoanAmount(loanAmount);
+        //save all user data using loan object
+        Loan.setAccountHolderName(accountHolderName);
+        Loan.setaccountNumber(accountNumber);
+        Loan.setIntrestRate(intrestRate);
+        Loan.setLoanTerm(loanTerm);
+        Loan.setLoanAmount(loanAmount);
+        Loan.setBalance(loanAmount);
+        Loan.makePayment(makePayment);
 
-        // Making payment and updating balance
-        loan.makePayment(makePayment);
-
-        // Output the loan details
-        System.out.println("Account Holder Name: " + loan.getAccountHolderName());
-        System.out.println("Account Number: " + loan.getaccountNumber());
-        //System.out.println("Balance amount to pay (without interest amount): " + loan.getBalance());
-        System.out.println("Interest Rate: " + loan.getInterestRate());
-        System.out.println("Loan Term (years): " + loan.getLoanTerm());
-        System.out.println("Loan Amount: " + loan.getLoanAmount());
-        System.out.println("Your Monthly Payment: " + loan.getMonthlyPayment());
+        System.out.println("Account Holder Name- " + Loan.getAccountHolderName());
+        System.out.println("Account Number- " + Loan.getaccountNumber());
+        System.out.println("Balance amount to pay (without intrest amount)- " + Loan.getBalance());
+        System.out.println("Inrest Rate- " + Loan.getIntrestRate());
+        System.out.println("Loan Term in Years- " + Loan.getLoanTerm());
+        System.out.println("Loan Amount to Pay- " + Loan.getLoanAmount());
+        System.out.println("Your Montly Payment- " + Loan.getMonthlyPayment());
     }
 }
-
 
 

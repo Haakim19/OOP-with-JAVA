@@ -188,7 +188,7 @@ public class GroupWork {
         // Output the loan details
         System.out.println("Account Holder Name: " + loan.getAccountHolderName());
         System.out.println("Account Number: " + loan.getaccountNumber());
-        //System.out.println("Balance amount to pay (without interest amount): " + loan.getBalance());
+        System.out.println("Balance amount to pay (without interest amount): " + loan.getBalance());
         System.out.println("Interest Rate: " + loan.getInterestRate());
         System.out.println("Loan Term (years): " + loan.getLoanTerm());
         System.out.println("Loan Amount: " + loan.getLoanAmount());
