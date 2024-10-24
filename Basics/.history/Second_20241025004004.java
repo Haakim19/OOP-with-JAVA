@@ -3,6 +3,6 @@ public class Second {
         Main myObj = new Main();
         System.out.println(myObj.x);
         myObj.myPublicMethod();
-        Main.myStaticMethod();// Call the static method on the class itself
+        Main.myStaticMethod();
     }
 }
