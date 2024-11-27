@@ -2,7 +2,6 @@ package task01;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 
@@ -31,17 +30,11 @@ class AbcHotel_ui  extends JFrame{
         lblNumbberFoDats = new JLabel("Number fo Days");
         //button
         btnSubmit = new JButton("Submit");
-        btnSubmit.setPreferredSize(new Dimension(100,30));
 
         //text field
         txtRoomType = new JTextField("");
         txtGuestType = new JTextField("");
         txtNumberFoDays = new JTextField("");
-
-        // Set size for text fields
-        txtRoomType.setPreferredSize(new Dimension(200, 25));
-        txtGuestType.setPreferredSize(new Dimension(200, 25));
-        txtNumberFoDays.setPreferredSize(new Dimension(200, 25));
 
         //creating the container
         Container mainScreen = this.getContentPane();

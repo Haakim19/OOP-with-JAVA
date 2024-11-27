@@ -60,6 +60,7 @@ class AbcHotel_ui  extends JFrame{
         setSize(320,390);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
     }
 }
 

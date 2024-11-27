@@ -38,11 +38,6 @@ class AbcHotel_ui  extends JFrame{
         txtGuestType = new JTextField("");
         txtNumberFoDays = new JTextField("");
 
-        // Set size for text fields
-        txtRoomType.setPreferredSize(new Dimension(200, 25));
-        txtGuestType.setPreferredSize(new Dimension(200, 25));
-        txtNumberFoDays.setPreferredSize(new Dimension(200, 25));
-
         //creating the container
         Container mainScreen = this.getContentPane();
         mainScreen.setLayout(new BoxLayout(mainScreen, BoxLayout.Y_AXIS));
