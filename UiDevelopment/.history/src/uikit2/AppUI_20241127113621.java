@@ -1,9 +1,7 @@
 package uikit2;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class AppUI extends JFrame implements ActionListener{
     private JLabel lblnum1,lblnum2,lbltotal;
@@ -32,16 +30,7 @@ public class AppUI extends JFrame implements ActionListener{
         mainScreen.add(btnAdd);
         mainScreen.add(btnReset);
 
-        //add a action to the btn easy way
-        btnAdd.addActionListener(this);
-        //add action to the btn, can seperate the action to a spacific btn
-        // ?btnAdd.addActionListener(new ActionListener() {
-        //?     public void actionPerformed(ActionEvent e){
-        //?        JOptionPane.showMessageDialog(mainScreen, "hi");
-        //?     }
-        //? });
-        btnReset.addActionListener(this);
-        setSize(400,200);//set the size of the screen
+        setSize(400,400);//set the size of the screen
         setVisible(true);//set secreen to be visible
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//set the default close operation to exit the screen
         //(without this the screen will not close)
@@ -49,18 +38,5 @@ public class AppUI extends JFrame implements ActionListener{
     }
     public static void main(String[] args) {
         AppUI appui = new AppUI();
-    }
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btnAdd){
-            txttotal.setText("" + (Integer.parseInt(txtnum1.getText()) + Integer.parseInt(txtnum2.getText())));//Converting to the string and writing to the txt fiald 
-            
-        }
-        if (e.getSource() == btnReset){
-            // JOptionPane.showMessageDialog(rootPane, "Reset btn");
-            txtnum1.setText("");
-            txtnum2.setText("");
-            txttotal.setText("");
-        }
     }
 }

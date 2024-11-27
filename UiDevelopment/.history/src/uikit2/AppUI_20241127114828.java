@@ -32,14 +32,10 @@ public class AppUI extends JFrame implements ActionListener{
         mainScreen.add(btnAdd);
         mainScreen.add(btnReset);
 
-        //add a action to the btn easy way
-        btnAdd.addActionListener(this);
-        //add action to the btn, can seperate the action to a spacific btn
-        // ?btnAdd.addActionListener(new ActionListener() {
-        //?     public void actionPerformed(ActionEvent e){
-        //?        JOptionPane.showMessageDialog(mainScreen, "hi");
-        //?     }
-        //? });
+        btnAdd.addActionListener(new ActionListener() {
+            
+        });
+        // btnAdd.addActionListener(this);
         btnReset.addActionListener(this);
         setSize(400,200);//set the size of the screen
         setVisible(true);//set secreen to be visible
@@ -52,15 +48,6 @@ public class AppUI extends JFrame implements ActionListener{
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btnAdd){
-            txttotal.setText("" + (Integer.parseInt(txtnum1.getText()) + Integer.parseInt(txtnum2.getText())));//Converting to the string and writing to the txt fiald 
-            
-        }
-        if (e.getSource() == btnReset){
-            // JOptionPane.showMessageDialog(rootPane, "Reset btn");
-            txtnum1.setText("");
-            txtnum2.setText("");
-            txttotal.setText("");
-        }
+        JOptionPane.showMessageDialog(rootPane, "Hello");
     }
 }

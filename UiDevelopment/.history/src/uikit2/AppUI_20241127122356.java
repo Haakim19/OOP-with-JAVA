@@ -53,6 +53,9 @@ public class AppUI extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnAdd){
+            // JOptionPane.showMessageDialog(rootPane, "Add btn");
+            // int total = num1 + num2;
+            // txttotal.setText(Integer.toString(num1+num2));
             txttotal.setText("" + (Integer.parseInt(txtnum1.getText()) + Integer.parseInt(txtnum2.getText())));//Converting to the string and writing to the txt fiald 
             
         }

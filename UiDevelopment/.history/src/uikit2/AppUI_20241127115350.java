@@ -33,7 +33,7 @@ public class AppUI extends JFrame implements ActionListener{
         mainScreen.add(btnReset);
 
         //add a action to the btn easy way
-        btnAdd.addActionListener(this);
+        // btnAdd.addActionListener(this);
         //add action to the btn, can seperate the action to a spacific btn
         // ?btnAdd.addActionListener(new ActionListener() {
         //?     public void actionPerformed(ActionEvent e){
@@ -53,14 +53,10 @@ public class AppUI extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnAdd){
-            txttotal.setText("" + (Integer.parseInt(txtnum1.getText()) + Integer.parseInt(txtnum2.getText())));//Converting to the string and writing to the txt fiald 
-            
+            JOptionPane.showMessageDialog(rootPane, "Add btn");
         }
         if (e.getSource() == btnReset){
-            // JOptionPane.showMessageDialog(rootPane, "Reset btn");
-            txtnum1.setText("");
-            txtnum2.setText("");
-            txttotal.setText("");
+            JOptionPane.showMessageDialog(rootPane, "Reset btn");
         }
     }
 }
