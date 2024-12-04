@@ -1,0 +1,10 @@
+package encapsulation;
+class car{
+    
+}
+public class Encapsulation{
+    public static void main(String[] args) {
+        
+    }
+    
+}
