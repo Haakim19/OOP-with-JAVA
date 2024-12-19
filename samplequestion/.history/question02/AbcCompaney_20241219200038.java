@@ -1,5 +1,3 @@
-package question02;
-import java.util.Scanner;
 class Car {
     private String registrationNumber;
     private String model;
@@ -43,54 +41,5 @@ class Car {
     // Getter for registration number
     public String getRegistrationNumber() {
         return registrationNumber;
-    }
-}
-
-
-public class AbcCompaney {
-    private Car car;
-
-    public AbcCompaney() {
-        // Initialize one car
-        car = new Car("ABC123", "Model S", "Tesla");
-    }
-
-    // Method to display the car in the inventory
-    public void displayCar() {
-        System.out.println("Current Car Inventory:");
-        car.displayDetails();
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        AbcCompaney rentalSystem = new AbcCompaney();
-        Scanner scanner = new Scanner(System.in);
-
-        // Display the car
-        rentalSystem.displayCar();
-
-        // Renting a car
-        System.out.print("Enter the registration number of the car to rent: ");
-        String regNumberToRent = scanner.nextLine();
-        if (regNumberToRent.equalsIgnoreCase(rentalSystem.car.getRegistrationNumber())) {
-            rentalSystem.car.rentCar();
-        } else {
-            System.out.println("Car not found.");
-        }
-
-        // Returning a car
-        System.out.print("Enter the registration number of the car to return: ");
-        String regNumberToReturn = scanner.nextLine();
-        if (regNumberToReturn.equalsIgnoreCase(rentalSystem.car.getRegistrationNumber())) {
-            rentalSystem.car.returnCar();
-        } else {
-            System.out.println("Car not found.");
-        }
-
-        // Display the car after renting and returning
-        System.out.println("\tUpdated Car Inventory:");
-        rentalSystem.displayCar();
-
-        scanner.close();
     }
 }

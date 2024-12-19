@@ -88,7 +88,7 @@ public class AbcCompaney {
         }
 
         // Display the car after renting and returning
-        System.out.println("\tUpdated Car Inventory:");
+        System.out.println("\nUpdated Car Inventory:");
         rentalSystem.displayCar();
 
         scanner.close();

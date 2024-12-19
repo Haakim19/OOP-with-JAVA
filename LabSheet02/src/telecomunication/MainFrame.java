@@ -128,7 +128,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(lblSedondFinal)
                 .addGap(18, 18, 18)
                 .addComponent(lblFinalBill)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         pack();
@@ -144,13 +144,23 @@ public class MainFrame extends javax.swing.JFrame {
 
     
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-        String Item = (String) cmbList.getSelectedItem(); 
-        double second = Double.parseDouble(txtSeconds.getText());
-        double selectedPackage = Double.parseDouble(Item);
-        double CalculateBill = Calculation.CalculateBill(selectedPackage, second);
-        lblPackagetypeFinal.setText("Package Type - "+Item );
-        lblSedondFinal.setText("NO of Seconds - " + Double.toString(second));
-        lblFinalBill.setText("Final Bill - " + Double.toString(CalculateBill));
+        try {
+        String item = (String) cmbList.getSelectedItem(); 
+        if (item == null || item.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please select a valid package type.");
+            return;
+        }
+        int selectedPackage = Integer.parseInt(item); // Parse the selected package to int
+        double seconds = Double.parseDouble(txtSeconds.getText());
+
+        double calculateBill = Calculation.CalculateBill(selectedPackage, seconds);
+
+        lblPackagetypeFinal.setText("Package Type - " + selectedPackage);
+        lblSedondFinal.setText("NO of Seconds - " + seconds);
+        lblFinalBill.setText("Final Bill - " + calculateBill);
+    } catch (NumberFormatException ex) {
+        JOptionPane.showMessageDialog(null, "Please enter valid numeric values.");
+    }
 // TODO add your handling code here:
     }//GEN-LAST:event_btnSubmitActionPerformed
 

@@ -1,4 +1,3 @@
-package question02;
 import java.util.Scanner;
 class Car {
     private String registrationNumber;
@@ -88,7 +87,7 @@ public class AbcCompaney {
         }
 
         // Display the car after renting and returning
-        System.out.println("\tUpdated Car Inventory:");
+        System.out.println("\nUpdated Car Inventory:");
         rentalSystem.displayCar();
 
         scanner.close();

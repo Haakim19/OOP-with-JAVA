@@ -11,10 +11,7 @@ class Person{
 public class Encapsulation{
     public static void main(String[] args) {
         Person p1 = new Person();
-        Person p2 = new Person();
         p1.setName("Ahamed");
         System.out.println(p1.getName());
-        p2.setName("Haakim");
-        System.out.println(p2.getName());
     }
 }
